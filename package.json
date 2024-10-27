@@ -5,5 +5,11 @@
   "dependencies": {
     "express": "^4.17.1",
     "request": "^2.88.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
