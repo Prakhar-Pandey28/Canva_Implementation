@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas App</title>
+    <style>
+        #canvas-container {
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Canvas App</h1>
+
+<div>
+    <button onclick="addText()">Add Text</button>
+    <button onclick="addRect()">Add Rectangle</button>
+    <button onclick="addCircle()">Add Circle</button>
+    <button onclick="addImage()">Add Image</button>
+    <button onclick="download()">Download</button>
+</div>
+
+<div id="canvas-container">
+    <canvas id="canvas" width="800" height="600"></canvas>
+</div>
+
+<!-- Load Fabric.js first -->
+<script src="fabric.min.js"></script>
+
+<!-- Load your custom JS -->
+<script src="app.js"></script>
+
+</body>
+</html>
