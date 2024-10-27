@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || 3000; // Update to use dynamic PORT
+const PORT = process.env.PORT || 3000; // Use dynamic PORT provided by Heroku
 
 // Serve static files (index.html, app.js, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
