@@ -3,12 +3,12 @@ import request from 'request';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// These two lines are required to handle __dirname in ES Modules
+// Handle __dirname in ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Update to use dynamic PORT
 
 // Serve static files (index.html, app.js, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -25,5 +25,5 @@ app.get('/proxy-image', (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
